@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SmartTracker</string>
+
+    <!-- activity_main Buttons -->
+    <string name="shortTraining">5 Minuten Training</string>
+    <string name="fullTraining">20 Minuten Training</string>
+    <string name="ownTraining">eigenes Training</string>
+    <string name="freeTraining">freie Übungswahl</string>
+    <string name="title_activity_free_training">FreeTraining</string>
 </resources>
