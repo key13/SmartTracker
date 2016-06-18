@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FreeTraining"></activity>
+        <activity android:name=".FreeTraining" />
+        <activity android:name=".Exercise" />
+        <activity android:name=".ExerciseExecution"></activity>
     </application>
 
 </manifest>
