@@ -1,5 +1,7 @@
 package com.example.kevin.smarttracker;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -52,7 +54,8 @@ public class ManagementSystem {
                 " - sind deine Oberschenkel parallel zum Boden, kannst du die Position für einen kurzen Moment halten, um das Beintraining ohne Geräte zu intensivieren<br>" +
                 " - anschließend bringst du dich über Druck auf den Fersen kontrolliert zurück nach oben in die Ausgangsposition<br>" +
                 " - halte auch dabei stets deinen Rücken gerade<br>" +
-                " - Ausführung wiederholen"));
+                " - Ausführung wiederholen",
+                Uri.parse("android.resource://com.example.kevin.smarttracker/" +R.raw.prisonersquat)));
         _fitnessexercises.add(new FitnessExercise("Liegestütz",
                 " - gehe auf die Knie<br>" +
                 " - senkrecht unter deinen Schultern platzierst du deine Hände<br>" +
@@ -68,7 +71,8 @@ public class ManagementSystem {
                 " - vermeide ein Hohlkreuz oder ein Herausstrecken deines Gesäßes<br>" +
                 " - drücke dich anschließend wieder nach oben<br>" +
                 " - achte dann darauf, dass du deine Arme leicht gebeugt sind<br>" +
-                " - Ausführung der Liegestütze mehrmals hintereinander wiederholen"));
+                " - Ausführung der Liegestütze mehrmals hintereinander wiederholen",
+                Uri.parse("android.resource://com.example.kevin.smarttracker/" +R.raw.pushup)));
         _fitnessexercises.add(new FitnessExercise("Russische Drehung",
                 " - setze dich mit deinem Po auf den Boden<br>" +
                 " - Beine zu 90 Grad anwinkeln und Fersen auf dem Boden absetzen<br>" +
@@ -80,6 +84,7 @@ public class ManagementSystem {
                 " - Hüfte und Beine bleiben nahezu unbewegt<br>" +
                 " - nun drehst du dich kontrolliert zur entgegengesetzten Seite<br>" +
                 " - Kopf stets in Verlängerung der Wirbelsäule halten<br>" +
-                " - Ausführung der Bauchmuskelübung mehrmals wiederholen"));
+                " - Ausführung der Bauchmuskelübung mehrmals wiederholen",
+                Uri.parse("android.resource://com.example.kevin.smarttracker/" +R.raw.russiantwist)));
     }
 }

@@ -1,17 +1,14 @@
 package com.example.kevin.smarttracker;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.media.session.MediaController;
 import android.net.Uri;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ScrollView;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -38,16 +35,20 @@ public class Exercise extends AppCompatActivity {
 
             //videoView = (VideoView) findViewById(R.id.videoView);
             //videoController = new MediaController(Exercise.this);
-            //videoView.setVideoPath("../..assets/Prisoner Squat - YouTube.mp4");
-            //videoController.setMediaPlayer(videoView);
+            //videoView.setVideoPath("../..assets/prisonersquat        //videoController.setMediaPlayer(videoView);
             //videoView.setMediaController(videoController);
 
-            /*VideoView mVideoView  = (VideoView)findViewById(R.id.videoView);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            VideoView mVideoView  = (VideoView)findViewById(R.id.videoView);
+            mVideoView.setVideoURI(exercise.getUri());
+            mVideoView.setMediaController(new MediaController(Exercise.this));
+
+
+            mVideoView.start();
+            /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 if (mVideoView != null) {
                     mVideoView.setMediaController(new MediaController(Exercise.this));
                 }
-                mVideoView.setVideoURI(Uri.parse("../..assets/Prisoner Squat - YouTube.mp4"));
+                mVideoView.setVideoURI(Uri.parse("android.resource://com.example.kevin.smarttracker/" +R.raw.prisonersquat));
                 mVideoView.requestFocus();
                 mVideoView.start();
             }*/
