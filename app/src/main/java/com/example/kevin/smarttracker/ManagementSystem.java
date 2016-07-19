@@ -40,46 +40,46 @@ public class ManagementSystem {
 
     private void initialize(){
         _fitnessexercises.add(new FitnessExercise("Gefangenen-Kniebeuge",
-                " - Oberkörper minimal nach vorne neigen\n" +
-                " - Füße schulterbreit voneinander entfernt und leicht nach außen gedreht aufstellen\n" +
-                " - Knie leicht anwinkeln\n" +
-                " - Hände hinter dem Kopf halten (Kopf aber nicht nach vorne drücken)\n" +
-                " - Ellenbogen zeigen jetzt jeweils seitlich nach außen\n" +
+                " - Oberkörper minimal nach vorne neigen<br>" +
+                " - Füße schulterbreit voneinander entfernt und leicht nach außen gedreht aufstellen<br>" +
+                " - Knie leicht anwinkeln<br>" +
+                " - Hände hinter dem Kopf halten (Kopf aber nicht nach vorne drücken)<br>" +
+                " - Ellenbogen zeigen jetzt jeweils seitlich nach außen<br>" +
                 " - Brust herausstrecken und Schulterblätter zusammenziehen",
-                " - strecke dein Gesäß nach hinten heraus und beuge langsam deine Kniegelenke\n" +
-                " - lasse die Knie nicht über deine Zehenspitzen hinausragen, um die Gelenke zu schonen\n" +
-                " - außerdem sollten sie immer in die gleiche Richtung wie deine Füße zeigen\n" +
-                " - sind deine Oberschenkel parallel zum Boden, kannst du die Position für einen kurzen Moment halten, um das Beintraining ohne Geräte zu intensivieren\n" +
-                " - anschließend bringst du dich über Druck auf den Fersen kontrolliert zurück nach oben in die Ausgangsposition\n" +
-                " - halte auch dabei stets deinen Rücken gerade\n" +
+                " - strecke dein Gesäß nach hinten heraus und beuge langsam deine Kniegelenke<br>" +
+                " - lasse die Knie nicht über deine Zehenspitzen hinausragen, um die Gelenke zu schonen<br>" +
+                " - außerdem sollten sie immer in die gleiche Richtung wie deine Füße zeigen<br>" +
+                " - sind deine Oberschenkel parallel zum Boden, kannst du die Position für einen kurzen Moment halten, um das Beintraining ohne Geräte zu intensivieren<br>" +
+                " - anschließend bringst du dich über Druck auf den Fersen kontrolliert zurück nach oben in die Ausgangsposition<br>" +
+                " - halte auch dabei stets deinen Rücken gerade<br>" +
                 " - Ausführung wiederholen"));
         _fitnessexercises.add(new FitnessExercise("Liegestütz",
-                " - gehe auf die Knie\n" +
-                " - senkrecht unter deinen Schultern platzierst du deine Hände\n" +
-                " - sie stützen deinen Oberkörper ab\n" +
-                " - Finger zusammen und Fingerspitzen zeigen nach vorne\n" +
-                " - Rücken gerade und den Kopf in Verlängerung der Wirbelsäule halten\n" +
-                " - Beine nach hinten strecken\n" +
+                " - gehe auf die Knie<br>" +
+                " - senkrecht unter deinen Schultern platzierst du deine Hände<br>" +
+                " - sie stützen deinen Oberkörper ab<br>" +
+                " - Finger zusammen und Fingerspitzen zeigen nach vorne<br>" +
+                " - Rücken gerade und den Kopf in Verlängerung der Wirbelsäule halten<br>" +
+                " - Beine nach hinten strecken<br>" +
                 " - du kannst sie zusammen lassen oder alternativ schulterbreit öffnen",
-                " - beuge langsam deine Arme\n" +
-                " - Ellenbogen zeigen dabei nach außen und etwas schräg nach hinten\n" +
-                " - dein Körper sinkt so weit, bis deine Nase den Boden berührt\n" +
-                " - er bleibt dabei vollständig in einer Linie\n" +
-                " - vermeide ein Hohlkreuz oder ein Herausstrecken deines Gesäßes\n" +
-                " - drücke dich anschließend wieder nach oben\n" +
-                " - achte dann darauf, dass du deine Arme leicht gebeugt sind\n" +
+                " - beuge langsam deine Arme<br>" +
+                " - Ellenbogen zeigen dabei nach außen und etwas schräg nach hinten<br>" +
+                " - dein Körper sinkt so weit, bis deine Nase den Boden berührt<br>" +
+                " - er bleibt dabei vollständig in einer Linie<br>" +
+                " - vermeide ein Hohlkreuz oder ein Herausstrecken deines Gesäßes<br>" +
+                " - drücke dich anschließend wieder nach oben<br>" +
+                " - achte dann darauf, dass du deine Arme leicht gebeugt sind<br>" +
                 " - Ausführung der Liegestütze mehrmals hintereinander wiederholen"));
         _fitnessexercises.add(new FitnessExercise("Russische Drehung",
-                " - setze dich mit deinem Po auf den Boden\n" +
-                " - Beine zu 90 Grad anwinkeln und Fersen auf dem Boden absetzen\n" +
-                " - Oberkörper etwa 45 Grad nach hinten lehnen und Rücken gerade halten\n" +
-                " - Arme gerade vor dem Bauch ausstrecken und Handflächen zusammen\n" +
+                " - setze dich mit deinem Po auf den Boden<br>" +
+                " - Beine zu 90 Grad anwinkeln und Fersen auf dem Boden absetzen<br>" +
+                " - Oberkörper etwa 45 Grad nach hinten lehnen und Rücken gerade halten<br>" +
+                " - Arme gerade vor dem Bauch ausstrecken und Handflächen zusammen<br>" +
                 " - Körper ausbalancieren und das Gleichgewicht halten",
-                " - Körper nun vollständig anspannen und den Oberkörper so weit wie möglich zur Seite drehen\n" +
-                " - die Bewegung findet im Rumpf statt\n" +
-                " - Hüfte und Beine bleiben nahezu unbewegt\n" +
-                " - nun drehst du dich kontrolliert zur entgegengesetzten Seite\n" +
-                " - Kopf stets in Verlängerung der Wirbelsäule halten\n" +
+                " - Körper nun vollständig anspannen und den Oberkörper so weit wie möglich zur Seite drehen<br>" +
+                " - die Bewegung findet im Rumpf statt<br>" +
+                " - Hüfte und Beine bleiben nahezu unbewegt<br>" +
+                " - nun drehst du dich kontrolliert zur entgegengesetzten Seite<br>" +
+                " - Kopf stets in Verlängerung der Wirbelsäule halten<br>" +
                 " - Ausführung der Bauchmuskelübung mehrmals wiederholen"));
     }
 }
