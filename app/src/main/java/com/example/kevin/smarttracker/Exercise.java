@@ -33,26 +33,11 @@ public class Exercise extends AppCompatActivity {
             description.setText(Html.fromHtml("<b>Ausgangsposition:</b><br>" + exercise.getStartingPosition() + "<br><b>Richtige Ausführung:</b><br>" + exercise.getProperExecution()));
             description.setMovementMethod(new ScrollingMovementMethod());
 
-            //videoView = (VideoView) findViewById(R.id.videoView);
-            //videoController = new MediaController(Exercise.this);
-            //videoView.setVideoPath("../..assets/prisonersquat        //videoController.setMediaPlayer(videoView);
-            //videoView.setMediaController(videoController);
-
             VideoView mVideoView  = (VideoView)findViewById(R.id.videoView);
             mVideoView.setVideoURI(exercise.getUri());
             mVideoView.setMediaController(new MediaController(Exercise.this));
-
-
+            mVideoView.seekTo(100);
             mVideoView.start();
-            /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                if (mVideoView != null) {
-                    mVideoView.setMediaController(new MediaController(Exercise.this));
-                }
-                mVideoView.setVideoURI(Uri.parse("android.resource://com.example.kevin.smarttracker/" +R.raw.prisonersquat));
-                mVideoView.requestFocus();
-                mVideoView.start();
-            }*/
-
 
             start = (Button) findViewById(R.id.button);
             start.setOnClickListener(new View.OnClickListener() {
