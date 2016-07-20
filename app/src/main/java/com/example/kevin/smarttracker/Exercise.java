@@ -1,7 +1,6 @@
 package com.example.kevin.smarttracker;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -14,10 +13,9 @@ import android.widget.VideoView;
 
 public class Exercise extends AppCompatActivity {
 
-    TextView headline, description;
-    VideoView videoView;
-    MediaController videoController;
-    Button start;
+    TextView _headline, _description;
+    VideoView _videoView;
+    Button _start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,26 +23,28 @@ public class Exercise extends AppCompatActivity {
         setContentView(R.layout.activity_exercise);
         Bundle bundle = getIntent().getExtras();
         final FitnessExercise exercise = ManagementSystem.getInstance().getFitnessExercise((String) bundle.get("exercise"));
+        final int training = (int) bundle.get("training");
         if (exercise != null) {
-            headline = (TextView) findViewById(R.id.textView2);
-            headline.setText(exercise.getName());
+            _headline = (TextView) findViewById(R.id.textView2);
+            _headline.setText(exercise.getName());
 
-            description = (TextView) findViewById(R.id.textView4);
-            description.setText(Html.fromHtml("<b>Ausgangsposition:</b><br>" + exercise.getStartingPosition() + "<br><b>Richtige Ausführung:</b><br>" + exercise.getProperExecution()));
-            description.setMovementMethod(new ScrollingMovementMethod());
+            _description = (TextView) findViewById(R.id.textView4);
+            _description.setText(Html.fromHtml("<b>Ausgangsposition:</b><br>" + exercise.getStartingPosition() + "<br><b>Richtige Ausführung:</b><br>" + exercise.getProperExecution()));
+            _description.setMovementMethod(new ScrollingMovementMethod());
 
-            VideoView mVideoView  = (VideoView)findViewById(R.id.videoView);
-            mVideoView.setVideoURI(exercise.getUri());
-            mVideoView.setMediaController(new MediaController(Exercise.this));
-            mVideoView.seekTo(100);
-            mVideoView.start();
+            _videoView  = (VideoView)findViewById(R.id.videoView);
+            _videoView.setVideoURI(exercise.getUri());
+            _videoView.setMediaController(new MediaController(Exercise.this));
+            _videoView.seekTo(100);
+            _videoView.start();
 
-            start = (Button) findViewById(R.id.button);
-            start.setOnClickListener(new View.OnClickListener() {
+            _start = (Button) findViewById(R.id.button);
+            _start.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent myIntent = new Intent(Exercise.this, ExerciseExecution.class);
                     myIntent.putExtra("exercise", exercise.getName());
+                    myIntent.putExtra("training", training);
                     //myIntent.putExtra("key",value);
                     Exercise.this.startActivity(myIntent);
                 }

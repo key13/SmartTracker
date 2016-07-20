@@ -10,12 +10,12 @@ import java.util.List;
  * Created by kevin on 19.07.2016.
  */
 public class ManagementSystem {
-    private static ManagementSystem ourInstance = new ManagementSystem();
+    private static ManagementSystem _ourInstance = new ManagementSystem();
 
     private List<FitnessExercise> _fitnessexercises = new ArrayList<FitnessExercise>();
 
     public static ManagementSystem getInstance() {
-        return ourInstance;
+        return _ourInstance;
     }
 
     private ManagementSystem() {
@@ -40,8 +40,22 @@ public class ManagementSystem {
         return null;
     }
 
+    public FitnessExercise getFitnessExercise(int id){
+        if(0 < id) {
+            Iterator<FitnessExercise> iter = this._fitnessexercises.iterator();
+            FitnessExercise exercise;
+            while(iter.hasNext()){
+                exercise = iter.next();
+                if(exercise.getId() == id){
+                    return exercise;
+                }
+            }
+        }
+        return null;
+    }
+
     private void initialize(){
-        _fitnessexercises.add(new FitnessExercise("Gefangenen-Kniebeuge",
+        _fitnessexercises.add(new FitnessExercise(1, "Gefangenen-Kniebeuge",
                 " - Oberkörper minimal nach vorne neigen<br>" +
                 " - Füße schulterbreit voneinander entfernt und leicht nach außen gedreht aufstellen<br>" +
                 " - Knie leicht anwinkeln<br>" +
@@ -56,7 +70,7 @@ public class ManagementSystem {
                 " - halte auch dabei stets deinen Rücken gerade<br>" +
                 " - Ausführung wiederholen",
                 Uri.parse("android.resource://com.example.kevin.smarttracker/" +R.raw.prisonersquat)));
-        _fitnessexercises.add(new FitnessExercise("Liegestütz",
+        _fitnessexercises.add(new FitnessExercise(2, "Liegestütz",
                 " - gehe auf die Knie<br>" +
                 " - senkrecht unter deinen Schultern platzierst du deine Hände<br>" +
                 " - sie stützen deinen Oberkörper ab<br>" +
@@ -73,7 +87,7 @@ public class ManagementSystem {
                 " - achte dann darauf, dass du deine Arme leicht gebeugt sind<br>" +
                 " - Ausführung der Liegestütze mehrmals hintereinander wiederholen",
                 Uri.parse("android.resource://com.example.kevin.smarttracker/" +R.raw.pushup)));
-        _fitnessexercises.add(new FitnessExercise("Russische Drehung",
+        _fitnessexercises.add(new FitnessExercise(3, "Russische Drehung",
                 " - setze dich mit deinem Po auf den Boden<br>" +
                 " - Beine zu 90 Grad anwinkeln und Fersen auf dem Boden absetzen<br>" +
                 " - Oberkörper etwa 45 Grad nach hinten lehnen und Rücken gerade halten<br>" +

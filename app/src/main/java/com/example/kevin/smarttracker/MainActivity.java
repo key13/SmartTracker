@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button shortTraining, fullTraining, ownTraining, freeTraining;
+    Button _shortTraining, _fullTraining, _ownTraining, _freeTraining;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,40 +16,41 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        shortTraining = (Button) findViewById(R.id.shortTraining);
-        shortTraining.setOnClickListener(new View.OnClickListener() {
+        _shortTraining = (Button) findViewById(R.id.shortTraining);
+        _shortTraining.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, Exercise.class);
+                myIntent.putExtra("exercise", "Russische Drehung");
+                myIntent.putExtra("training",3);
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        _fullTraining = (Button) findViewById(R.id.fullTraining);
+        _fullTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Intent myIntent = new Intent(MainActivity.this, FreeTraining.class);
                 //myIntent.putExtra("key",value);
                 //MainActivity.this.startActivity(myIntent);
+                _fullTraining.setText("#demnächst Verfügbar");
             }
         });
 
-        fullTraining = (Button) findViewById(R.id.fullTraining);
-        fullTraining.setOnClickListener(new View.OnClickListener() {
+        _ownTraining = (Button) findViewById(R.id.ownTraining);
+        _ownTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Intent myIntent = new Intent(MainActivity.this, FreeTraining.class);
                 //myIntent.putExtra("key",value);
                 //MainActivity.this.startActivity(myIntent);
-                fullTraining.setText("#demnächst Verfügbar");
+                _ownTraining.setText("#demnächst Verfügbar");
             }
         });
 
-        ownTraining = (Button) findViewById(R.id.ownTraining);
-        ownTraining.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent myIntent = new Intent(MainActivity.this, FreeTraining.class);
-                //myIntent.putExtra("key",value);
-                //MainActivity.this.startActivity(myIntent);
-                ownTraining.setText("#demnächst Verfügbar");
-            }
-        });
-
-        freeTraining = (Button) findViewById(R.id.freeTraining);
-        freeTraining.setOnClickListener(new View.OnClickListener() {
+        _freeTraining = (Button) findViewById(R.id.freeTraining);
+        _freeTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, FreeTraining.class);
