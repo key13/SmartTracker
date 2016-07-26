@@ -2,7 +2,7 @@
     <string name="app_name">SmartTracker</string>
 
     <!-- labels -->
-    <string name="appName">SmartTracker</string>
+    <string name="appName">Training</string>
     <string name="exercises">Übungen</string>
     <string name="exerciseName">Übungsname</string>
     <string name="exerciseDescription">Übungsbeschreibung</string>

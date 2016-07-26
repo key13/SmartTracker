@@ -24,4 +24,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
+    compile files('src/main/java/libs/accessory-v2.3.2.jar')
+    compile files('src/main/java/libs/sdk-v1.0.0.jar')
 }
